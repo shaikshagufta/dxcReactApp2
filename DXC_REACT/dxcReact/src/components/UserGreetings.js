@@ -8,13 +8,14 @@ export class UserGreetings extends Component {
             IsLoggedIn: false
         }
     }
-    // using ternary operator for conditional rendering  
+    // using short circuit operator operator for conditional rendering  
     render() {
-        return (
-            this.state.IsLoggedIn ?
-                <div>welcome Guest</div> :
-                <div>welcome Shaggu</div>
-        )
+        return this.state.IsLoggedIn && <div>welcome ansari</div>
+        /*  return(
+             this.state.IsLoggedIn ?
+                 <div>welcome Guest</div> :
+                 <div>welcome Shaggu</div>
+         ) */
 
         /*  let message 
          if (this.state.IsLoggedIn) {
