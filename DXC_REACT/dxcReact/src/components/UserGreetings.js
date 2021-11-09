@@ -5,19 +5,25 @@ export class UserGreetings extends Component {
         super(props)
 
         this.state = {
-            IsLoggedIn: true
+            IsLoggedIn: false
         }
     }
-    // using variable message for conditional rendering  
+    // using ternary operator for conditional rendering  
     render() {
-        let message
-        if (this.state.IsLoggedIn) {
-            message = <div>welcome Shaggu</div>
-        }
-        else {
-            message = <div>welcome Guest</div>
-        }
-        return <div>{message}</div>
+        return (
+            this.state.IsLoggedIn ?
+                <div>welcome Guest</div> :
+                <div>welcome Shaggu</div>
+        )
+
+        /*  let message 
+         if (this.state.IsLoggedIn) {
+             message = <div>welcome Shaggu</div>
+         }
+         else {
+             message = <div>welcome Guest</div>
+         }
+         return <div>{message}</div>*/
         /*  if(this.state.isLoggedIn){
          return (
              <div>
