@@ -17,9 +17,9 @@ export class ParentComponent extends Component {
     /**
      * i want to pass the reference of this method as a property to the child
      */
-    greetParent() {
+    greetParent(childName) {
         //alert('hello '+this.state.parentName)
-        alert(`hello ${this.state.parentName}`) //string templates-- es6
+        alert(`hello ${this.state.parentName} from  ${childName}`) //string templates-- es6
     }
 
     render() {

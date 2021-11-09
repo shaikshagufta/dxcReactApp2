@@ -7,7 +7,7 @@ import React from 'react'
 function ChildComponent(props) {
     return (
         <div>
-            <button onClick = { props.shagguHandler}>greet parent</button>
+            <button onClick = {() => props.shagguHandler('Shayi')}>greet parent</button>
         </div>
     )
 }

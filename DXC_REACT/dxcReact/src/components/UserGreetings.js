@@ -8,20 +8,23 @@ export class UserGreetings extends Component {
             IsLoggedIn: true
         }
     }
-    //if-else way of conditional rendering   
+    // using variable message for conditional rendering  
     render() {
+        let message
         if (this.state.IsLoggedIn) {
-            return <div>welcome Shaggu</div>
+            message = <div>welcome Shaggu</div>
         }
         else {
-            return <div>welcome Guest</div>
+            message = <div>welcome Guest</div>
         }
-        /*return (
-            <div>
-              <div>Welcome Shaggu</div>
-              <div>Welcome Shayi</div>
-            </div>
-        )*/
+        return <div>{message}</div>
+        /*  if(this.state.isLoggedIn){
+         return (
+             <div>
+               <div>Welcome Shaggu</div>
+               <div>Welcome Shayi</div>
+             </div>
+         )*/
     }
 }
 
