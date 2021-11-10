@@ -8,7 +8,7 @@ import React from 'react'
 function ChildComponent(props) {
     return (
         <div>
-            <button onClick = {props.shaguftaHandler}>greet parent</button>
+            <button onClick={() => props.shaguftaHandler('Shayi')}>greet parent</button>
         </div>
     )
 }
