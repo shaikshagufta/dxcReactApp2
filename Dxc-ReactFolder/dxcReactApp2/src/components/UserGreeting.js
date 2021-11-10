@@ -5,7 +5,7 @@ export class UserGreeting extends Component {
         super(props)
 
         this.state = {
-            IsLoggedIn: true
+            IsLoggedIn: false
         }
     }
 
