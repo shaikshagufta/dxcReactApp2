@@ -21,9 +21,15 @@ export class Form extends Component {
             comments: event.target.value
         })
     }
+
+    handleTopicChange = (event) => {
+        this.setState({
+            topic: event.target.value
+        })
+    }
     //for app to react to the text we added a handler for username &
     //added handler to the comment box too
-    //added topics div but wont be able to select the options as no handler is added
+    //added topics div & handler is added so we are now able to select
     render() {
         return (
             <form>
@@ -37,15 +43,13 @@ export class Form extends Component {
                 </div>
                 <div>
                     <label>topics</label>
-                    <select value={this.state.topic}>
+                    <select value={this.state.topic} onChange={this.handleTopicChange}>
                         <option value="react" >React</option>
                         <option value="angular">Angular</option>
                         <option value="vue">Vue</option>
 
                     </select>
-
                 </div>
-
             </form>
         )
     }
