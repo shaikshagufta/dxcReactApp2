@@ -10,14 +10,19 @@ export class UserGreeting extends Component {
     }
 
     render() {
-        let message
+        return(
+            this.state.IsLoggedIn ?
+            <div>Welcome Shagufta</div> :
+            <div>Welcome Guest</div>
+        )
+        /*let message 
         if (this.state.IsLoggedIn) {
             message = <div>Welcome Shagufta</div>
         }
         else {
             message = <div>Welcome Guest</div>
         }
-        return <div>{message}</div>
+        return <div>{message}</div>*/
         /*    return <div>Welcome Shagufta</div>
         }
         else {
