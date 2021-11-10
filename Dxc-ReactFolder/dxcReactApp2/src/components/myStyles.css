@@ -4,3 +4,6 @@
 .font-xl{
     font-size: 74px;
 }
+.textDecoration{
+    text-decoration: underline;
+}
