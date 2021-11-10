@@ -6,7 +6,8 @@ export class Form extends Component {
 
         this.state = {
             username: '',
-            comments: ''
+            comments: '',
+            topic: 'React'//added another property
         }
     }
     handleUsernameChange = (event) => {
@@ -14,8 +15,15 @@ export class Form extends Component {
             username: event.target.value
         })
     }
+
+    handleCommentsChange = (event) => {
+        this.setState({
+            comments: event.target.value
+        })
+    }
     //for app to react to the text we added a handler for username &
-    //added another div for commets too with a label but the text is not hadled yet
+    //added handler to the comment box too
+    //added topics div but wont be able to select the options as no handler is added
     render() {
         return (
             <form>
@@ -25,7 +33,17 @@ export class Form extends Component {
                 </div>
                 <div>
                     <label>comments</label>
-                    <textarea value={this.state.comments}></textarea>
+                    <textarea value={this.state.comments} onChange={this.handleCommentsChange}></textarea>
+                </div>
+                <div>
+                    <label>topics</label>
+                    <select value={this.state.topic}>
+                        <option value="react" >React</option>
+                        <option value="angular">Angular</option>
+                        <option value="vue">Vue</option>
+
+                    </select>
+
                 </div>
 
             </form>
