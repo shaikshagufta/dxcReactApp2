@@ -27,13 +27,20 @@ export class Form extends Component {
             topic: event.target.value
         })
     }
-    //for app to react to the text we added a handler for username &
-    //added handler to the comment box too
-    //added topics div & handler is added so we are now able to select
-    //adding a submit button but evry time we hit it the data vanishes as default method
+
+    handleSubmit = (event) => {
+        alert(`${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault() //conents will not be refreshed/vanish
+    }
+    /* 1.for app to react to the text we added a handler for username &
+    2.added handler to the comment box too
+    3.added topics div & handler is added so we are now able to select
+    4.adding a submit button but evry time we hit it the data vanishes as default method
+    5.to avoid this we add the preventDefault method is added 
+    6.in form tag we decide which method should be called when submit is clicked*/
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <label>username</label>
                     <input type='text' value={this.state.username} onChange={this.handleUsernameChange} />
@@ -51,7 +58,7 @@ export class Form extends Component {
 
                     </select>
                 </div>
-                <button type = "submit" >Submit</button>
+                <button type="submit" >Submit</button>
             </form>
         )
     }
