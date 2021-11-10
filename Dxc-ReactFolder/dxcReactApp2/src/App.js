@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <h1 className={styles.success}>success</h1>
       <h1 className='error'>error</h1>
-      <StyleSheet enabled={false} />
+      <StyleSheet enabled={true} />
       <Inline />
       <Table />
       <NameList />
