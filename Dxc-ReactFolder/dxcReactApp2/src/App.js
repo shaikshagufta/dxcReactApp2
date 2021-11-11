@@ -12,11 +12,13 @@ import styles from './appStyles.module.css';
 import Form from './components/Form';
 import { Fragment } from 'react';
 import Fragments from './components/Fragments';
+import NewTable from './components/NewTable';
 
 
 function App() {
   return (
     <div className="App">
+      <NewTable />
       <Form />
       <Fragments />
       <h1 className={styles.success}>success</h1>
