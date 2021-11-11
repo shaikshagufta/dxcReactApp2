@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, memo } from 'react'
+import MemoComp from './MemoComp';
 import PureComp from './PureComp';
 import RegularComp from './RegularComp';
 
@@ -15,7 +16,7 @@ class ParentComp extends Component {
     componentDidMount() {
         setInterval(() => {
             this.setState({
-                name: 'Shagufta-Parent Component'
+                name: 'Shagufta-Parent Component-memo'
             })
 
         }, 2000);
@@ -26,8 +27,9 @@ class ParentComp extends Component {
         return (
             <div>
                 Parent Component
-                <RegularComp name={this.state.name}></RegularComp>
-                <PureComp name={this.state.name}></PureComp>
+                <MemoComp name = {this.state.name}/>
+                {/*} <RegularComp name={this.state.name}></RegularComp>
+                <PureComp name={this.state.name}></PureComp> */}
             </div>
         )
     }
