@@ -13,20 +13,21 @@ class ParentComp extends Component {
     }
     //adding a timer 
     componentDidMount() {
-    setInterval(() => {
-        this.setState({
-            name: 'Shagufta-Parent Component'
-        })
-        
-    }, 2000);
-}
-//calling the child components to render
+        setInterval(() => {
+            this.setState({
+                name: 'Shagufta-Parent Component'
+            })
+
+        }, 2000);
+    }
+    //adding log to check the render method  
     render() {
+        console.log('******************* parent component************************')
         return (
             <div>
                 Parent Component
-                <RegularComp name = {this.state.name}></RegularComp>
-                <PureComp name= {this.state.name}></PureComp>
+                <RegularComp name={this.state.name}></RegularComp>
+                <PureComp name={this.state.name}></PureComp>
             </div>
         )
     }
