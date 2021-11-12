@@ -15,12 +15,14 @@ import Fragments from './components/Fragments';
 import NewTable from './components/NewTable';
 import ParentComp from './components/ParentComp';
 import RefsDemo from './components/refs/RefsDemo';
+import FocusInput from './components/refs/FocusInput';
+
 
 
 function App() {
   return (
     <div className="App">
-      <RefsDemo />
+      <FocusInput />
 
       <ParentComp />
       <NewTable />
