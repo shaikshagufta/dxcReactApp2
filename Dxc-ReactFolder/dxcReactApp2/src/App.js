@@ -16,13 +16,14 @@ import NewTable from './components/NewTable';
 import ParentComp from './components/ParentComp';
 import RefsDemo from './components/refs/RefsDemo';
 import FocusInput from './components/refs/FocusInput';
+import FrParentInput from './components/refs/FrParentInput';
 
 
 
 function App() {
   return (
     <div className="App">
-      <FocusInput />
+      <FrParentInput />
 
       <ParentComp />
       <NewTable />
