@@ -14,11 +14,13 @@ import { Fragment } from 'react';
 import Fragments from './components/Fragments';
 import NewTable from './components/NewTable';
 import ParentComp from './components/ParentComp';
+import RefsDemo from './components/RefsDemo';
 
 
 function App() {
   return (
     <div className="App">
+      <RefsDemo />
       <ParentComp />
       <NewTable />
       <Form />
