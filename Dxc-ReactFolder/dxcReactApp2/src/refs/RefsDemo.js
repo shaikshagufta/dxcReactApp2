@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
-export class RefsDemo extends Component {
+/**
+ * refs is about getting the handle of  dom element
+ */
+class RefsDemo extends Component {
     constructor(props) {
         super(props)
 
@@ -13,13 +16,13 @@ export class RefsDemo extends Component {
     }
 
 
-render() {
-    return (
-        <div>
-            <input type="text" ref={this.inputRef} />
-        </div>
-    )
-}
+    render() {
+        return (
+            <div>
+                <input type="text" ref={this.inputRef} />
+            </div>
+        )
+    }
 }
 
 export default RefsDemo
