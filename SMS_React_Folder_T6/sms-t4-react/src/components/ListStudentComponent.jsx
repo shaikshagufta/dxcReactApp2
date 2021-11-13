@@ -10,9 +10,9 @@ class ListStudentComponent extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         StudentService.getStudents().then((res) => {
-            this.setState({ students: res.data});
+            this.setState({ students: res.data });
 
         });
     }
