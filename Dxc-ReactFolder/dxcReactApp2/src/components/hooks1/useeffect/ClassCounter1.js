@@ -23,7 +23,7 @@ export class ClassCounter1 extends Component {
         effect is didUpdate
      */
     componentDidUpdate(prevProps, prevState) {
-        if (prevState.count != this.state.count) {
+        if (prevState.count !== this.state.count) {
             console.log('updating doc title')
             document.title = `clicked ${this.state.count} times`
         }
