@@ -30,7 +30,7 @@ import CounterHook1 from './components/hooks1/useeffect/CounterHook1';
 function App() {
   return (
     <div className="App">
-      <CounterHook1 />
+      <ClassCounter1 />
       <HooksCounter3 />
       <HookCounter2 />
       <HookCounter />
