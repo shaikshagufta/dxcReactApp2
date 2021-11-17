@@ -19,13 +19,14 @@ import FocusInput from './components/refs/FocusInput';
 import FrParentInput from './components/refs/FrParentInput';
 import PortalsDemo from './components/portals/PortalsDemo';
 import ClassCounter from './components/hooks/ClassCounter';
+import HookCounter from './components/hooks/HookCounter';
 
 
 
 function App() {
   return (
     <div className="App">
-      <ClassCounter />
+      <HookCounter />
       <FrParentInput />
       <PortalsDemo />
 
