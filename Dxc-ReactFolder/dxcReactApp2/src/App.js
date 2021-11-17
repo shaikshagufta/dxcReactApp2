@@ -21,12 +21,14 @@ import PortalsDemo from './components/portals/PortalsDemo';
 import ClassCounter from './components/hooks/ClassCounter';
 import HookCounter from './components/hooks/HookCounter';
 import HookCounter2 from './components/hooks/HookCounter2';
+import HooksCounter3 from './components/hooks/HooksCounter3';
 
 
 
 function App() {
   return (
     <div className="App">
+      <HooksCounter3 />
       <HookCounter2 />
       <HookCounter />
       <FrParentInput />
