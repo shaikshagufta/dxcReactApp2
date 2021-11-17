@@ -8,7 +8,7 @@ import HookMouse from './components/hooks1/useeffect/HookMouse';
 function App() {
   return (
     <div className="App">
-      <HookMouse />
+      <ClassMouse />
       
     </div>
   );
