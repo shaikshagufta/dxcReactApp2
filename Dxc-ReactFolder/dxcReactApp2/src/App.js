@@ -22,12 +22,15 @@ import ClassCounter from './components/hooks/ClassCounter';
 import HookCounter from './components/hooks/HookCounter';
 import HookCounter2 from './components/hooks/HookCounter2';
 import HooksCounter3 from './components/hooks/HooksCounter3';
+import ClassCounter1 from './components/hooks1/useeffect/ClassCounter1';
+import CounterHook1 from './components/hooks1/useeffect/CounterHook1';
 
 
 
 function App() {
   return (
     <div className="App">
+      <CounterHook1 />
       <HooksCounter3 />
       <HookCounter2 />
       <HookCounter />
