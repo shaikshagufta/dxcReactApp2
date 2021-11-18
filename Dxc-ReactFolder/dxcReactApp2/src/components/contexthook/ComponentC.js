@@ -1,9 +1,12 @@
 import React from 'react'
+import { UserContext } from '../../App'
 
 function ComponentC() {
     return (
         <div>
-           <h1>ComponentC</h1> 
+            <UserContext.Consumer>
+                {user => { return <h1>component C {user}</h1> }}
+            </UserContext.Consumer>
         </div>
     )
 }
