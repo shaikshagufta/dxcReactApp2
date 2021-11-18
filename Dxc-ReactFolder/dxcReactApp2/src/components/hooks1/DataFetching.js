@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 function DataFetching() {
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState({})
+    const [id, setId] = useState(1)
     /**
     * ///useEffect is about the lifecycle methods of a class component --
     *  if you want to use lifecycle methods of a class component in a stateless functional component --then we use useEffect hook
@@ -24,13 +25,19 @@ function DataFetching() {
 
     return (
         <div>
-            <ul>
+            <input
+                type="text"
+                value={id}
+                onChange={e => setId(e.target.value)}
+            />
+            <div>{posts.title}</div>
+            {/*<ul>
                 {
                     posts.map(
-                        post => <li key={post.id}> {post.title}</li>
+                        posts => <li key={post.id}> {post.title}</li>
                     )
                 }
-            </ul>
+            </ul>*/}
         </div>
     )
 }
