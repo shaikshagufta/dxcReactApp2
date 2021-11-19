@@ -6,14 +6,16 @@ import ComponentA from './components/contexthook/ComponentA';
 
 
 export const UserContext = React.createContext()
-
+export const BatchContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
 
-      <UserContext.Provider value={'Shagufta'} >
-        <ComponentA />
+      <UserContext.Provider value={'ShaikShagufta'} >
+        <BatchContext.Provider value={'dxc batch 2'}>
+          <ComponentA />
+        </BatchContext.Provider>
       </UserContext.Provider>
 
     </div>
