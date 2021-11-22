@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './appStyles.css';
-import ComponentA from './components/contexthook/ComponentA';
+import ComponentA from './components/hooks1/contexthook/ComponentA';
 
 
 
