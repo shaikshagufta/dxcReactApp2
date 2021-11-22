@@ -5,7 +5,7 @@ import ComponentA from './components/contexthook/ComponentA';
 
 
 
-export const UserContext = React.createContext()
+export const UserContext = React.createContext()    //exporting a context
 export const BatchContext = React.createContext()
 
 function App() {
