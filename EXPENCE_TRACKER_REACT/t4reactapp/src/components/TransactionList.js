@@ -1,28 +1,21 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { Transaction } from './Transaction';
 
 export const TransactionList = () => {
     const { transactions } = useContext(GlobalContext);
-    //insted of "console.log(context)" we can use destructuring like above// to check the log if pulling is posible
-    /* 
-    here transactions is an array so we map through it and output each transaction 
-    this we shall do it in a different component 
-    but for now we add an expression as follows
-    */
+    // Now the list is going to be replaced by the Transaction component
     return (
-        // later on the list is going to be replaced by the Transaction component
-        <div>
+        <>
             <h3>History</h3>
             <ul className="list">
-                {transactions.map(transactions => (
-                    <li className="minus">
-                        {transactions.text} <span>-$400</span><button className="delete-btn">x</button>
-                    </li>//becoz now we have the access to transaction values here
-                ))}
-                {/* <li className="minus">
-                    Cash <span>-$400</span><button className="delete-btn">x</button>
-                </li> */}
+                {transactions.map(transaction => (<Transaction key={transaction.id} trasaction={transaction} />))}
             </ul>
-        </div>
+        </>
     )
 }
+/*
+bringing{ transactions } from Global state
+mapping through- for eact transaction we render a Transaction component by passing a prop
+this prop in this maping is called a list and this list needs a key wich needs to be unique
+*/
