@@ -15,9 +15,9 @@ export default (state, action) => {
       }
     case 'ADD_TRANSACTION':
       return {
-        ...state,
-        transactions: [action.payload, ...state.transactions]
-      }
+        ...state,//initial state / current state
+        transactions: [action.payload, ...state.transactions]//return the transaction already present+new one in the payload in dispatch 
+      }// we do so by seeting it as an array[] and get using spread operator, the new traction+the initial transactions
 
     default:
       return state;

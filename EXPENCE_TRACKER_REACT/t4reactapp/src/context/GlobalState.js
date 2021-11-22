@@ -29,12 +29,20 @@ export const GlobalProvider = (/*using destructuring*/{ children })/*arrow funct
             payload: id
         });
     }
+    //similarly ,instead of id here we take whole transaction
+    function addTransaction(transaction) {
+        dispatch({
+            type: 'ADD_TRANSACTION',
+            payload: transaction
+        });
+    }
 
-//passing down the actions to the provider
-//the delete button is in Transactions comp 
+    //passing down the actions to the provider
+    //the delete button is in Transactions comp 
     return (<GlobalContext.Provider value={{
         transactions: state.transactions,
-        deleteTransaction
+        deleteTransaction,
+        addTransaction
     }}>
         {children}
     </GlobalContext.Provider>);
