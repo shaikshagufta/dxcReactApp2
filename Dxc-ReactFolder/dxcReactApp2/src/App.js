@@ -9,6 +9,7 @@ import CounterOne from './components/hooks1/reducerhook/CounterOne';
 import CounterThree from './components/hooks1/reducerhook/CounterThree';
 import CounterTwo from './components/hooks1/reducerhook/CounterTwo';
 import DataFectching1 from './components/hooks1/useReducercases/DataFetching1';
+import DataFetchingTwo from './components/hooks1/useReducercases/DataFetchingTwo';
 
 
 
@@ -32,7 +33,8 @@ function App() {
 
   return (
     <div className="App">
-      <DataFectching1 />
+      <DataFetchingTwo />
+ 
     </div>
   );
 }
