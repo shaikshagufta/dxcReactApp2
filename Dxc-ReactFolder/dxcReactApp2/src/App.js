@@ -3,6 +3,7 @@ import './App.css';
 import './appStyles.css';
 import ComponentA from './components/hooks1/contexthook/ComponentA';
 import CounterOne from './components/hooks1/reducerhook/CounterOne';
+import CounterTwo from './components/hooks1/reducerhook/CounterTwo';
 
 
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
 
-      <CounterOne />
+      <CounterTwo />
 
     </div>
   );
