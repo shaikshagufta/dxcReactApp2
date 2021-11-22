@@ -1,17 +1,12 @@
 import React from 'react'
 
-/* 
-we need to catch the props in the TransactionList
-we can use props and write in <li> as props.transaction.list 
-or we can destructure it as follows
-*/
-
 export const Transaction = ({ transaction }) => {
+    //handling the ammount 
+    const sign = transaction.amount < 0 ? '-' : '+';
     return (
 
         <li className="minus">
-            {transaction.text} <span>-$400</span><button className="delete-btn">x</button>
+            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span><button className="delete-btn">x</button>
         </li>
-
     )
 }
