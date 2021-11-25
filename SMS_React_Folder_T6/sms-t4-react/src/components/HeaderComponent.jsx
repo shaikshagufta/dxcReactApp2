@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-export default class HeaderComponent extends Component {
+class HeaderComponent extends Component {
 
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             
+
         }
     }
-    
+
     render() {
         return (
             <div>
@@ -22,3 +22,5 @@ export default class HeaderComponent extends Component {
         )
     }
 }
+
+export default HeaderComponent

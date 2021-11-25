@@ -1,13 +1,13 @@
-import axios from 'axios'
+import Axios from "axios";
 
 const STUDENT_API_BASE_URL = "http://localhost:8080/api/v1/students"
 
-class StudentService {
+class StudenService {
 
     getStudents(){
-        return axios.get(STUDENT_API_BASE_URL);
+       return Axios.get(STUDENT_API_BASE_URL) 
     }
 
-}
 
-export default new StudentService()
+}
+export default new StudenService()

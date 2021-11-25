@@ -1,24 +1,24 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import CreateStudentComponent from './components/CreateStudentComponent';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListStudentComponent from './components/ListStudentComponent';
-import CreateStudentComponent from './components/CreateStudentComponent';
 
 function App() {
   return (
     <div>
       <Router>
-          <HeaderComponent />
-          <div className="container">
-            <Switch>
-              <Route path="/" exact element={<ListStudentComponent />} />
-              <Route path="/student" element={<ListStudentComponent />} />
-              <Route path="/add-student" element={<CreateStudentComponent />} />
-            </Switch>
-          </div>
-          <FooterComponent />
+        <HeaderComponent />
+        <div className="container">
+          <Switch>
+            <Route path="/" exact component={ListStudentComponent}></Route>
+            <Route path="/students" component={ListStudentComponent}></Route>
+            <Route path="/add-students/add" component={CreateStudentComponent}></Route>
+          </Switch>
+        </div>
+        <FooterComponent />
       </Router>
     </div>
 
