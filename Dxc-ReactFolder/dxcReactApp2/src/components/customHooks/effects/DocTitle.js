@@ -1,14 +1,10 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState} from 'react'
+import useDocTitle from '../UseDocTitle'
 
 function DocTitle() {
     const [count,setCount] = useState(0)
-//life before custom hooks
-    useEffect(
-        ()=> {
-            document.title = `Count ${count}`
-        },
-        [count]//dependency
-    )
+//life with custom hooks
+    useDocTitle(count)
 
     return (
         <div>
