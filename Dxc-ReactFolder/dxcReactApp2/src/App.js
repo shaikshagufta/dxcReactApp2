@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react';
-import ClickCounter from './components/heigherOrderComponents/ClickCounter';
-import HoverCounter from './components/heigherOrderComponents/HoverCounter';
+import DocTitle from './components/customHooks/effects/DocTitle';
+import DocTitle1 from './components/customHooks/effects/DocTitle1';
 
 
 function App() {
   return (
 
     <div className="App">
-      <ClickCounter />
-      <HoverCounter />
+      <DocTitle />
+      <DocTitle1 />
     </div>
 
   );
