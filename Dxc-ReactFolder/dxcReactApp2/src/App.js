@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react';
-import DocTitle from './components/customHooks/effects/DocTitle';
-import DocTitle1 from './components/customHooks/effects/DocTitle1';
+import Counter1 from './components/customHooks/functionality/Counter1';
+import Counter2 from './components/customHooks/functionality/Counter2';
 
 
 function App() {
   return (
 
     <div className="App">
-      <DocTitle />
-      <DocTitle1 />
+      <Counter1 />
+      <Counter2 />
     </div>
 
   );
